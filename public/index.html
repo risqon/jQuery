@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> BREAD WEB </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="card">
+      <h5 class="card-header">BREAD (Browser, Read, Edit, Add, Delete) </h3>
+        <div class="card-body">
+
+          <!-- Form Search -->
+          <div class="container">
+            <form action="" method="GET" id="searchForm" autocomplete="off">
+              <input type="hidden" id="page" name="page" value="1">
+              <div class="container mt-4">
+                <h5 style="text-align: left">Filters : </h3>
+                  <br>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" name="checkId" type="checkbox" id="checkId">
+                        <label class="form-check-label" name="checkId" for="checkId">
+                          ID
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-10">
+                      <div class="form-group">
+                        <input type="number" name="id" class="form-control" id="id" placeholder="ID">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" name="checkString" type="checkbox" id="checkString">
+                        <label class="form-check-label" name="checkString" for="checkString">
+                          String
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-10">
+                      <div class="form-group">
+                        <input type="text" name="string" class="form-control" id="string" placeholder="String">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkInteger" id="checkInteger">
+                        <label class="form-check-label" for="integer">
+                          Integer
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-10">
+                      <div class="form-group">
+                        <input type="number" class="form-control" id="integer" name="integer" placeholder="Integer">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkFloat" id="checkFloat">
+                        <label class="form-check-label" for="checkFloat">
+                          Float
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-10">
+                      <div class="form-group">
+                        <input type="number" class="form-control" step="0.01" id="float" name="float"
+                          placeholder="Float">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkDate" id="checkDate">
+                        <label class="form-check-label" for="date">
+                          Date
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="form-group">
+                        <input type="date" class="form-control" name="startDate" id="startDate"
+                          placeholder="masukan date">
+                      </div>
+                    </div>
+                    <div class="w-100"></div>
+                    <p class="col offset-2">to</p>
+                    <div class="w-100"></div>
+                    <div class="col-3 offset-2">
+                      <div class="form-group">
+                        <input type="date" class="form-control" name="endDate" id="endDate" placeholder="masukan date">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="checkBoolean" id="checkBoolean">
+                        <label class="form-check-label" for="boolean">
+                          Boolean
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-10">
+                      <div class="form-group">
+                        <select name="boolean" id="boolean" class="form-control">
+                          <option selected disabled> choose the boolean</option>
+                          <option name="bool" class="form-control" value="true">True</option>
+                          <option name="bool" class="form-control" value="false">False</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" id="search-btn">Search</button>
+                  <a href="/">
+                    <button type="button" class="btn btn-primary " id="reset">Reset</button>
+                  </a>
+              </div>
+            </form>
+          </div>
+          <br>
+
+          <div class="container">
+            <table class="table table-striped border border-dark">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">String</th>
+                  <th scope="col">Integer</th>
+                  <th scope="col">Float</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Boolean</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <!-- Menggunakan JQuery -->
+
+              </tbody>
+            </table>
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+
+                <!-- Diisi dengan menggunakan JQuery -->
+
+              </ul>
+            </nav>
+
+            <!--  Pagination Selesai -->
+
+            <a class="btn btn-primary" href="#" role="button" data-toggle="modal" data-target="#Add">Add New</a>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+
+  <!-- Modal Add start -->
+  <div class="modal fade" id="Add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLongTitle">Add Data</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body container">
+          <div calass="container">
+            <form action="" method="POST" id="addForm" autocomplete="off">
+              <!--        String      -->
+              <div class="form-group row">
+                <label for="string" class="col-sm-2 col-form-label">String</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="addString" placeholder="String" name="string">
+                </div>
+              </div>
+              <!--       Integer        -->
+              <div class="form-group row">
+                <label for="integer" class="col-sm-2 col-form-label">Integer</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="addInteger" placeholder="Integer" name="integer">
+                </div>
+              </div>
+              <!--       Float        -->
+              <div class="form-group row">
+                <label for="float" class="col-sm-2 col-form-label">Float</label>
+                <div class="col-sm-10">
+                  <input type="text" step="0.01"  class="form-control" id="addFloat" placeholder="Float" name="float">
+                </div>
+              </div>
+              <!--    Date      -->
+              <div class="form-group row">
+                <label for="date" class="col-sm-2 col-form-label">Date</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="addDate" placeholder="Date" name="date">
+                </div>
+              </div>
+              <!--    Boolean    -->
+              <div class="form-group row">
+                <label for="boolean" class="col-sm-2 col-form-label">Boolean</label>
+                <div class="col-sm-10">
+                  <select class="custom-select d-block w-100" id="addBoolean" placeholder="Boolean" name="boolean"
+                    >
+                    <option selected disabled>Choose the boolean...</option>
+                    <option>true</option>
+                    <option>false</option>
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer btn-add">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+                <button type="submit" id="submit-data" class="btn btn-primary btn-save" dataid=""
+                  data-dismiss="modal">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Modal Edit start -->
+  <div class="modal fade" id="Edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title" id="exampleModalLongTitle">Edit Data</h1>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body container">
+          <div calass="container">
+            <form action="" method="PUT">
+              <!--        ID      -->
+              <div class="form-group row">
+                <label for="id" class="col-sm-2 col-form-label">ID</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="editId" name="id">
+                </div>
+              </div>
+              <!--        String      -->
+              <div class="form-group row">
+                <label for="string" class="col-sm-2 col-form-label">String</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="editString" name="string">
+                </div>
+              </div>
+              <!--       Integer        -->
+              <div class="form-group row">
+                <label for="integer" class="col-sm-2 col-form-label">Integer</label>
+                <div class="col-sm-10">
+                  <input type="number" class="form-control" id="editInteger" name="integer">
+                </div>
+              </div>
+              <!--       Float        -->
+              <div class="form-group row">
+                <label for="float" class="col-sm-2 col-form-label">Float</label>
+                <div class="col-sm-10">
+                  <input type="text" step="0.01"  class="form-control" id="editFloat" name="float">
+                </div>
+              </div>
+              <!--    Date      -->
+              <div class="form-group row">
+                <label for="date" class="col-sm-2 col-form-label">Date</label>
+                <div class="col-sm-10">
+                  <input type="date" class="form-control" id="editDate" name="date">
+                </div>
+              </div>
+              <!--    Boolean    -->
+              <div class="form-group row">
+                <label for="modaBoolean" class="col-sm-2 col-form-label">Boolean</label>
+                <div class="col-sm-10">
+                  <select class="custom-select d-block w-100" id="editBoolean" name="boolean">
+                    
+                  </select>
+                </div>
+              </div>
+              <div class="modal-footer btn-edit">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+                <button type="submit" id="submit-data" class="btn btn-primary btn-chance" dataid=""
+                  data-dismiss="modal">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Edit End-->
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="/javascripts/script.js"></script>
+</body>
+
+</html>
